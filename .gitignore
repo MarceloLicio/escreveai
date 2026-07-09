@@ -1,0 +1,29 @@
+# Configuracao local do OpenCode
+.opencode/
+
+# Dependencias e caches locais
+node_modules/
+.vercel/
+.netlify/
+.cache/
+
+# Variaveis de ambiente locais
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de sistema e editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
