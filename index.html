@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="no-referrer">
-  <title>Desenvolvedor Marcelo | Portfolio</title>
+  <title>EscreveAI | Gerador de textos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Navegacao principal">
-      <a class="logo" href="#hero">Dev Marcelo</a>
+        <a class="logo" href="#hero">EscreveAI</a>
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -19,8 +19,9 @@
       </button>
       <ul class="nav-links">
         <li><a href="#hero">Inicio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#generator">Gerador</a></li>
+        <li><a href="#skills">Recursos</a></li>
+        <li><a href="#projects">Exemplos</a></li>
         <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
@@ -29,85 +30,115 @@
   <main>
     <section id="hero" class="hero section">
       <div class="hero-content">
-        <p class="eyebrow">Desenvolvedor Full Stack</p>
-        <h1>Construo interfaces modernas e solucoes web eficientes.</h1>
+        <p class="eyebrow">Gerador de textos com IA</p>
+        <h1>Escreva melhor, mais rapido e no tom certo.</h1>
         <p class="hero-subtitle">
-          Transformo ideias em produtos digitais rapidos, responsivos e bem estruturados,
-          combinando frontend elegante com backend confiavel.
+          Transforme ideias simples em textos prontos para posts, emails, anuncios e mensagens,
+          escolhendo o estilo ideal antes de gerar.
         </p>
-        <a class="primary-button" href="mailto:contato@devmarcelo.com">Entrar em contato</a>
+        <a class="primary-button" href="#generator">Gerar texto</a>
       </div>
       <div class="hero-card" aria-label="Resumo profissional">
         <div class="status-dot"></div>
-        <p>Disponivel para novos projetos</p>
-        <strong>React · Node · Python</strong>
+        <p>Escolha o tom antes de escrever</p>
+        <strong>Formal · Casual · Divertido · Persuasivo</strong>
+      </div>
+    </section>
+
+    <section id="generator" class="section generator-section">
+      <div class="section-heading">
+        <p class="eyebrow">Criacao assistida</p>
+        <h2>Gerador EscreveAI</h2>
+      </div>
+      <div class="generator-panel">
+        <div class="generator-form" aria-label="Formulario de geracao de texto">
+          <label for="text-request">O que voce quer escrever?</label>
+          <textarea id="text-request" rows="6" placeholder="Ex: Crie uma legenda para divulgar uma consultoria de marketing digital."></textarea>
+
+          <label for="tone-select">Tom do texto</label>
+          <select id="tone-select">
+            <option value="casual" selected>Casual</option>
+            <option value="formal">Formal</option>
+            <option value="divertido">Divertido</option>
+            <option value="persuasivo">Persuasivo</option>
+          </select>
+
+          <button class="primary-button" id="generate-button" type="button">Gerar texto</button>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </div>
+
+        <article class="generated-card" aria-label="Texto gerado">
+          <p class="result-tone" id="result-tone">Tom usado: Casual</p>
+          <h3>Resultado</h3>
+          <p id="generated-text">Descreva o texto que voce precisa e escolha um tom para gerar uma sugestao.</p>
+        </article>
       </div>
     </section>
 
     <section id="skills" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Stack</p>
-        <h2>Skills principais</h2>
+        <p class="eyebrow">Recursos</p>
+        <h2>O que o EscreveAI ajuda a criar</h2>
       </div>
       <div class="skills-grid">
         <article class="skill-card">
           <span>⚛</span>
-          <h3>React</h3>
-          <p>Aplicacoes componentizadas, SPA e interfaces responsivas.</p>
+          <h3>Posts</h3>
+          <p>Legendas e chamadas para redes sociais com linguagem adequada ao publico.</p>
         </article>
         <article class="skill-card">
           <span>◆</span>
-          <h3>Node</h3>
-          <p>APIs REST, autenticacao, integracoes e servicos escalaveis.</p>
+          <h3>Emails</h3>
+          <p>Mensagens claras para vendas, relacionamento, suporte e comunicados.</p>
         </article>
         <article class="skill-card">
           <span>Py</span>
-          <h3>Python</h3>
-          <p>Automacoes, scripts, analise de dados e backends robustos.</p>
+          <h3>Anuncios</h3>
+          <p>Copys com foco em beneficio, objecoes e chamada para acao.</p>
         </article>
         <article class="skill-card">
           <span>TS</span>
-          <h3>TypeScript</h3>
-          <p>Codigo tipado, seguro e mais previsivel em aplicacoes modernas.</p>
+          <h3>Ideias</h3>
+          <p>Sugestoes iniciais para destravar campanhas, conteudos e comunicacoes.</p>
         </article>
         <article class="skill-card">
           <span>API</span>
-          <h3>APIs REST</h3>
-          <p>Endpoints bem definidos, autenticacao e integracoes eficientes.</p>
+          <h3>Revisoes</h3>
+          <p>Ajustes de tom para deixar textos mais profissionais, leves ou convincentes.</p>
         </article>
         <article class="skill-card">
           <span>DB</span>
-          <h3>PostgreSQL</h3>
-          <p>Modelagem relacional, consultas performaticas e dados consistentes.</p>
+          <h3>Rascunhos</h3>
+          <p>Primeiras versoes prontas para editar, adaptar e publicar rapidamente.</p>
         </article>
       </div>
     </section>
 
     <section id="projects" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Portfolio</p>
-        <h2>Projetos recentes</h2>
+        <p class="eyebrow">Exemplos</p>
+        <h2>Use em diferentes canais</h2>
       </div>
       <div class="projects-grid">
         <article class="project-card">
-          <div class="project-image">Dashboard</div>
+          <div class="project-image">Instagram</div>
           <div class="project-content">
-            <h3>Analytics SaaS</h3>
-            <p>Dashboard responsivo para visualizacao de metricas em tempo real.</p>
+            <h3>Post para Instagram</h3>
+            <p>Texto curto, direto e alinhado ao tom escolhido antes da geracao.</p>
           </div>
         </article>
         <article class="project-card">
-          <div class="project-image">E-commerce</div>
+          <div class="project-image">Email</div>
           <div class="project-content">
-            <h3>Loja Online</h3>
-            <p>Experiencia de compra otimizada com carrinho, checkout e painel admin.</p>
+            <h3>Email comercial</h3>
+            <p>Mensagem estruturada para apresentar uma oferta com clareza.</p>
           </div>
         </article>
         <article class="project-card">
-          <div class="project-image">Produtividade</div>
+          <div class="project-image">Anuncio</div>
           <div class="project-content">
-            <h3>App de Produtividade</h3>
-            <p>Aplicativo para organizar tarefas, prioridades e rotina de trabalho.</p>
+            <h3>Anuncio persuasivo</h3>
+            <p>Copy focada em dor, beneficio e proximo passo para o leitor.</p>
           </div>
         </article>
       </div>
@@ -115,7 +146,7 @@
   </main>
 
   <footer id="contact" class="footer">
-    <p>© 2026 Dev Marcelo. Todos os direitos reservados.</p>
+    <p>© 2026 EscreveAI. Todos os direitos reservados.</p>
     <div class="social-links">
       <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
